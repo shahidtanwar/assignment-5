@@ -1,0 +1,16 @@
+import pandas as pd
+
+data = {
+    "Product":["A","B","C","A","B","C"],
+    "Category":["X","X","Y","X","X","Y"],
+    "Sales":[1000,1500,2000,1200,1600,2500],
+    "Region":["North","South","North","East","West","South"]
+}
+
+df = pd.DataFrame(data)
+
+# Category-wise total sales
+print(df.groupby("Category")["Sales"].sum())
+
+# Top 3 products by sales
+print(df.sort_values(by="Sales", ascending=False).head(3))
