@@ -1,0 +1,21 @@
+import matplotlib.pyplot as plt
+
+marks = [78,85,90,65,88,92,70,95]
+
+# Histogram
+plt.hist(marks)
+plt.title("Marks Distribution")
+plt.show()
+
+# Box Plot
+plt.boxplot(marks)
+plt.title("Marks Spread")
+plt.show()
+
+# Pie Chart
+labels = ["A","B","C","D"]
+sizes = [40,30,20,10]
+
+plt.pie(sizes, labels=labels, autopct="%1.1f%%")
+plt.title("Category Percentage")
+plt.show()
