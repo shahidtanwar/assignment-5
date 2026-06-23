@@ -1,0 +1,15 @@
+import numpy as np
+
+arr = np.random.randint(1, 10, (4,4))
+
+print("Matrix:\n", arr)
+
+# Diagonal elements
+print("Diagonal =", np.diag(arr))
+
+# Replace even numbers with 0
+arr[arr % 2 == 0] = 0
+print("After replacing even numbers:\n", arr)
+
+# Sum of rows
+print("Row sums =", np.sum(arr, axis=1))
