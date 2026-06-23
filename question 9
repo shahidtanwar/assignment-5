@@ -1,0 +1,21 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+subjects = ["Math","Science","English","Hindi"]
+marks = [85,78,90,88]
+
+# Line Plot
+plt.plot(subjects, marks, marker='o')
+plt.title("Student Marks")
+plt.xlabel("Subjects")
+plt.ylabel("Marks")
+plt.grid()
+plt.show()
+
+# Bar Chart
+plt.bar(subjects, marks)
+plt.title("Student Marks")
+plt.xlabel("Subjects")
+plt.ylabel("Marks")
+plt.grid()
+plt.show()
