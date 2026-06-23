@@ -1,0 +1,37 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Dataset
+np.random.seed(10)
+
+df = pd.DataFrame({
+    "Age": np.random.randint(22, 50, 50),
+    "Salary": np.random.randint(25000, 100000, 50),
+    "Experience": np.random.randint(1, 20, 50)
+})
+
+# Subplots
+fig, ax = plt.subplots(2, 2, figsize=(12, 8))
+
+# Line Plot
+ax[0,0].plot(df["Age"])
+ax[0,0].set_title("Line Plot")
+
+# Scatter Plot
+ax[0,1].scatter(df["Age"], df["Salary"])
+ax[0,1].set_title("Scatter Plot")
+
+# Bar Chart
+ax[1,0].bar(df.index[:10], df["Experience"][:10])
+ax[1,0].set_title("Bar Chart")
+
+# Histogram
+ax[1,1].hist(df["Salary"], bins=10)
+ax[1,1].set_title("Histogram")
+
+# Main Title
+plt.suptitle("2 x 2 Subplots using Matplotlib")
+
+plt.tight_layout()
+plt.show()
