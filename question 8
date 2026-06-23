@@ -1,0 +1,17 @@
+import pandas as pd
+
+df1 = pd.DataFrame({
+    "StudentID":[1,2,3,4],
+    "Name":["Ali","Sara","John","Ravi"],
+    "Department":["CS","IT","ECE","ME"]
+})
+
+df2 = pd.DataFrame({
+    "StudentID":[1,2,3,4],
+    "Marks":[95,80,65,90],
+    "Grade":["A","B","C","A"]
+})
+
+result = pd.merge(df1, df2, on="StudentID")
+
+print(result[result["Grade"]=="A"])
