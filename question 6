@@ -1,0 +1,20 @@
+import pandas as pd
+import numpy as np
+
+data = {
+    "Marks":[80, np.nan, 70, 90],
+    "City":["Jaipur", "Delhi", np.nan, "Agra"]
+}
+
+df = pd.DataFrame(data)
+
+# Missing values
+print(df.isnull())
+
+# Fill Marks
+df["Marks"] = df["Marks"].fillna(df["Marks"].mean())
+
+# Drop rows with missing City
+df = df.dropna()
+
+print(df)
