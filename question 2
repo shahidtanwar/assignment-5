@@ -1,0 +1,11 @@
+import numpy as np
+
+a = np.random.randint(1,10,(3,3))
+b = np.random.randint(1,10,(3,3))
+
+print("Array A\n",a)
+print("Array B\n",b)
+
+print("Addition\n",a+b)
+print("Subtraction\n",a-b)
+print("Matrix Multiplication\n",np.matmul(a,b))
